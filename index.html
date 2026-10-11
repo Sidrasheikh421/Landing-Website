@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sweet Haven Cake & Bakery — freshly baked cakes, cupcakes, pastries, cookies and beverages made with love.">
+  <title>Sweet Haven Cake & Bakery</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rose: { 50:'#fff7f6', 100:'#ffe8e5', 200:'#ffd1cc', 400:'#ef6680', 500:'#e83e65', 700:'#8e3043' },
+            cocoa: { 800:'#3a211d', 900:'#291613' },
+            cream: '#fffaf7'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/google-fonts/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="announcement">Freshly baked • Made with love • Custom orders for every occasion</div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="Sweet Haven home">
+        <span class="brand-mark">♡</span>
+        <span><strong>Sweet Haven</strong><small>CAKE &amp; BAKERY</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav">
+        <a class="active" href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Search" id="searchBtn"><img src="assets/icons/search.svg"></button>
+        <button class="icon-btn cart-btn" aria-label="Cart"><img src="assets/icons/cart.svg"><b id="cartCount">0</b></button>
+        <a class="btn btn-primary nav-order" href="#contact">Order Now <span>→</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/images/hero-cake.jpg">
+        <source src="assets/video/hero-video.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <div class="hero-copy">
+          <p class="eyebrow">FRESHLY BAKED <i>•</i> MADE WITH LOVE</p>
+          <h1>Life is Sweeter<br><em>with Cake</em> ♡</h1>
+          <p class="hero-text">At Sweet Haven, we create delicious cakes, cupcakes, pastries and more — perfect for every celebration and sweet moment in life.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#menu">Order Now <span>→</span></a>
+            <a class="btn btn-light" href="#menu">View Menu</a>
+          </div>
+          <div class="trust-row">
+            <div><img src="assets/icons/truck.svg"><span><b>Fast Delivery</b><small>Across Karachi</small></span></div>
+            <div><img src="assets/icons/leaf.svg"><span><b>100% Fresh</b><small>Ingredients</small></span></div>
+            <div><img src="assets/icons/heart.svg"><span><b>Custom Orders</b><small>For Every Occasion</small></span></div>
+          </div>
+        </div>
+        <div class="hero-badge">Cakes<br>Cupcakes<br>Pastries<br>&amp; More... <span>♥</span></div>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">OUR MENU</p><h2>Our Special Treats <em>♡</em></h2><p>From classic favorites to unique creations, explore our delicious range of cakes, cupcakes, pastries and more.</p></div>
+          <a class="outline-btn" href="#menu">View Full Menu <span>→</span></a>
+        </div>
+        <div class="product-grid">
+          <article class="product-card"><div class="product-image"><img src="assets/images/cake.jpg" alt="Fresh celebration cake"><span>BESTSELLER</span></div><div class="product-body"><h3>Cakes</h3><p>Celebration cakes made for memorable moments.</p><strong>Starting from Rs. 1,200</strong><button class="add-btn" data-product="Cakes">+</button></div></article>
+          <article class="product-card"><div class="product-image"><img src="assets/images/cupcakes.jpg" alt="Fresh cupcakes"></div><div class="product-body"><h3>Cupcakes</h3><p>Pretty little treats with big flavor.</p><strong>Starting from Rs. 250</strong><button class="add-btn" data-product="Cupcakes">+</button></div></article>
+          <article class="product-card"><div class="product-image"><img src="assets/images/pastries.jpg" alt="Fresh pastries"></div><div class="product-body"><h3>Pastries</h3><p>Flaky, buttery and freshly baked.</p><strong>Starting from Rs. 300</strong><button class="add-btn" data-product="Pastries">+</button></div></article>
+          <article class="product-card"><div class="product-image"><img src="assets/images/cookies.jpg" alt="Chocolate chip cookies"></div><div class="product-body"><h3>Cookies</h3><p>Golden, chunky and delightfully chewy.</p><strong>Starting from Rs. 150</strong><button class="add-btn" data-product="Cookies">+</button></div></article>
+          <article class="product-card"><div class="product-image"><img src="assets/images/beverages.jpg" alt="Cold beverages"></div><div class="product-body"><h3>Beverages</h3><p>Sweet sips to pair with your favorite treat.</p><strong>Starting from Rs. 180</strong><button class="add-btn" data-product="Beverages">+</button></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer container">
+      <div><p class="eyebrow">SPECIAL OFFER</p><h2>Buy 2 Get 1 Free <em>♥</em></h2><p>On All Cupcakes &amp; Cookies</p><a href="#menu" class="btn btn-dark">Shop Now <span>→</span></a></div>
+      <div class="offer-art"><img src="assets/images/offer.jpg" alt="Sweet Haven cupcake offer"></div>
+      <div class="offer-note">Sweet<br>deals for<br>sweeter days ♡</div>
+    </section>
+
+    <section class="section about-strip" id="about">
+      <div class="container about-grid">
+        <div class="about-photo"><img src="assets/images/hero-cake.jpg" alt="Sweet Haven celebration cake"></div>
+        <div class="about-copy"><p class="eyebrow">ABOUT SWEET HAVEN</p><h2>Baked Fresh, Served with Love <em>♡</em></h2><p>Sweet Haven Cake &amp; Bakery brings beautiful cakes and freshly baked treats together for every sweet moment. From everyday cravings to special celebrations, our menu is made to feel as good as it tastes.</p><a class="outline-btn" href="#contact">Get in Touch <span>→</span></a></div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-heading centered"><div><p class="eyebrow">A LITTLE SWEET INSPIRATION</p><h2>Made to Make You Smile</h2><p>Beautiful bakes for birthdays, celebrations, gifting and everyday cravings.</p></div></div>
+        <div class="gallery-grid">
+          <div class="gallery-item tall"></div><div class="gallery-item"></div><div class="gallery-item"></div><div class="gallery-item wide"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-heading centered"><div><p class="eyebrow">WHAT OUR CUSTOMERS SAY</p><h2>Loved by Sweet Tooths</h2></div></div>
+        <div class="testimonial-grid">
+          <article class="review"><div class="avatar"><img src="assets/images/review-1.jpg" alt="Customer"></div><div><p>“The cake was absolutely amazing! So fresh, so beautiful and tasted even better. Highly recommended!”</p><b>— Ayesha Khan</b><div class="stars">★★★★★</div></div></article>
+          <article class="review"><div class="avatar"><img src="assets/images/review-2.jpg" alt="Customer"></div><div><p>“Best bakery in town! Their cupcakes are a dream. Will definitely order again.”</p><b>— Ali Raza</b><div class="stars">★★★★★</div></div></article>
+          <article class="review"><div class="avatar"><img src="assets/images/review-3.jpg" alt="Customer"></div><div><p>“Great quality, on-time delivery and very professional service. Loved it!”</p><b>— Sana Ahmed</b><div class="stars">★★★★★</div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-contact" id="contact">
+      <div class="container two-col">
+        <div class="faq-panel" id="faq">
+          <p class="eyebrow">QUESTIONS?</p><h2>Frequently Asked Questions <em>♥</em></h2>
+          <div class="faq-list">
+            <details><summary>Do you offer custom cake designs? <span>+</span></summary><p>Yes. Tell us about your celebration and preferred design when placing your order.</p></details>
+            <details><summary>What are your delivery charges? <span>+</span></summary><p>Delivery charges depend on the destination and order details. Contact us for your exact quote.</p></details>
+            <details><summary>How can I place an order? <span>+</span></summary><p>Use the order buttons or send us a message through the contact form.</p></details>
+            <details><summary>Do you use eggless ingredients? <span>+</span></summary><p>Ask about available eggless options when placing your order.</p></details>
+            <details><summary>Can I cancel or modify my order? <span>+</span></summary><p>Contact us as soon as possible so we can check what changes are possible.</p></details>
+          </div>
+        </div>
+        <div class="contact-panel">
+          <p class="eyebrow">GET IN TOUCH</p><h2>Let's Make Something Sweet</h2><p>We'd love to hear from you! Reach out for orders, custom requests or any queries.</p>
+          <div class="contact-details">
+            <p>📍 123 Cake Street, Karachi, Pakistan</p><p>📞 +92 300 1234567</p><p>✉️ hello@sweethaven.pk</p><p>🕘 Mon – Sun: 9:00 AM – 10:00 PM</p>
+          </div>
+          <form id="contactForm">
+            <div class="form-grid"><input required placeholder="Your Name"><input type="email" required placeholder="Your Email"></div>
+            <textarea required placeholder="Your Message"></textarea><button class="btn btn-primary" type="submit">Send Message <span>→</span></button>
+            <p class="form-message" id="formMessage"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark">♡</span><span><strong>Sweet Haven</strong><small>CAKE &amp; BAKERY</small></span></a>
+      <div class="footer-links"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#testimonials">Testimonials</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+      <div class="socials"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="TikTok">♪</a><a href="#" aria-label="YouTube">▶</a></div>
+    </div>
+    <div class="container copyright">© 2026 Sweet Haven. All rights reserved. <span>Made with ♥ for cake lovers.</span></div>
+  </footer>
+  <div class="map-strip"><img src="assets/images/map.jpg" alt="Karachi location map"></div>
+
+  <div class="search-modal" id="searchModal" aria-hidden="true"><div class="search-box"><button id="closeSearch">×</button><h3>Find a Sweet Treat</h3><input id="searchInput" placeholder="Search cakes, cupcakes, cookies..."><p id="searchResult"></p></div></div>
+  <div class="toast" id="toast">Added to your sweet cart! 🍰</div>
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+  <script src="js/app.js"></script>
+</body>
+</html>
